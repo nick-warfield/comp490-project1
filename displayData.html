@@ -2,20 +2,23 @@
 <html>
   <head>
     <title>COMP 490 Project #1</title>
+	<script src="AdjustQueue.js"></script>
   </head>
   <body>
     <table id="queue" border="1">
 		<tr>
-			<td style="font-weight: bold">ID Number</td>
-			<td style="font-weight: bold">Username</td>
-			<td style="font-weight: bold">Service Requested</td>
+			<td style="font-weight: bold; width: 150px;text-align: center;">ID Number</td>
+			<td style="font-weight: bold; width: 150px;text-align: center;">Username</td>
+			<td style="font-weight: bold; width: 150px;text-align: center;">Service Requested</td>
 		</tr>
     </table><br>
     <h4>Adjust the Queue</h4>
 	<p>
+		ID #: <input type="text" id="idnum" style="margin-bottom: 10px"><br>
 		Username: <input type="text" id="username" style="margin-bottom: 10px"><br>
-		<button id="add" style="margin-right: 5px">Add User</button>
-		<button id="remove">Remove User</button>
+		Service: <input type="text" id="service" style="margin-bottom: 10px"><br>
+		<button id="add" style="margin-right: 5px" onclick="addUser()">Add User</button>
+		<button id="remove" onclick="removeUser()">Remove User</button>
 	</p>
 	
   </body>
