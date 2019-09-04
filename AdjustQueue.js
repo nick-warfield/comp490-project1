@@ -35,3 +35,8 @@ function addUser() {
 function removeUser() {
 	
 }
+
+function removeFront() {
+	var table = document.getElementById("queue");
+	table.deleteRow(1);
+}
