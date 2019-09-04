@@ -1,20 +1,12 @@
-// generate numbers that are always 4 digits and unique
-class ConfirmNumber {
+var min = 1000;
+var max = 9999;
+var confNum = min;
 
-	ConfirmNumber() {
-		min = 1000;
-		max = 9999;
-		confNum = min;
-
-		function genNum() {
-			var num = confNum;
-			confNum++;
-			if (confNum > max) { confNum = min; }
-			return num;
-		}
-	}
-
-	function get() { return genNum(); }
+function genNum() {
+	var num = confNum;
+	confNum++;
+	if (confNum > max) { confNum = min; }
+	return num;
 }
 
 function addUser() {
@@ -23,7 +15,7 @@ function addUser() {
 	var email = document.getElementById("email").value;
 	var newRow = table.insertRow(row);
 	var row = table.rows.length;
-	var confNum = numberGen.get();
+	var confNum = genNum();
 	
 	for (var c = 0; c < 3; c++) {
 		var newCell = newRow.insertCell(c);
