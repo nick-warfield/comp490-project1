@@ -7,15 +7,21 @@ function addUser() {
 	var row = table.rows.length;
 	var confNum = Math.floor(Math.random() * 100);
 	
-	for (var c = 0; c < 3; c++) {
+	for (var c = 0; c < 6; c++) {
 		var newCell = newRow.insertCell(c);
 		if (c == 0) {
-			newCell.innerHTML = IDNum;
+			newCell.innerHTML = confNum;
 		}
 		if (c == 1) {
-			newCell.innerHTML = userName;
+			newCell.innerHTML = IDNum;
 		}
 		if (c == 2) {
+			newCell.innerHTML = userName;
+		}
+		if (c == 3 || c == 4) {
+			newCell.innerHTML = '-';
+		}
+		if (c == 5) {
 			newCell.innerHTML = service;
 		}
 	}
