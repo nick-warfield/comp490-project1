@@ -17,7 +17,7 @@ function addUser() {
 	var row = table.rows.length;
 	var confNum = genNum();
 
-	for (var c = 0; c < 3; c++) {
+  for (var c = 0; c < 3; c++) {
 		var newCell = newRow.insertCell(c);
 		if (c == 0) {
 			newCell.innerHTML = confNum;

@@ -7,20 +7,19 @@
   <body>
     <table id="queue" border="1">
 		<tr>
-			<td style="font-weight: bold; width: 150px;text-align: center;">Confirmation Number</td>
-			<td style="font-weight: bold; width: 150px;text-align: center;">ID Number</td>
+			<td style="font-weight: bold; width: 150px;text-align: center;">Number</td>
 			<td style="font-weight: bold; width: 150px;text-align: center;">Name</td>
 			<td style="font-weight: bold; width: 150px;text-align: center;">email</td>
-			<td style="font-weight: bold; width: 150px;text-align: center;">Phone Number</td>
-			<td style="font-weight: bold; width: 150px;text-align: center;">Service</td>
 		</tr>
     </table><br>
     <h4>Adjust the Queue</h4>
 	<p>
-		ID #: <input type="text" id="idnum" style="margin-bottom: 10px"><br>
-		Username: <input type="text" id="username" style="margin-bottom: 10px"><br>
-		Service: <input type="text" id="service" style="margin-bottom: 10px"><br>
+		Name: <input type="text" id="username" style="margin-bottom: 10px"><br>
+		email: <input type="email" id="email" style="margin-bottom: 10px"><br>
 		<button id="add" style="margin-right: 5px" onclick="addUser()">Add User</button>
+	</p>
+		Confirmation Number: <input type="text" id="confNum" style="margin-bottom: 10px"><br>
+		<button id="removeFront" onclick="removeFront()">Remove Front</button>
 		<button id="remove" onclick="removeUser()">Remove User</button>
 	</p>
 	
