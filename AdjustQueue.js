@@ -16,8 +16,8 @@ function addUser() {
 	var newRow = table.insertRow(row);
 	var row = table.rows.length;
 	var confNum = genNum();
-	
-	for (var c = 0; c < 3; c++) {
+
+  for (var c = 0; c < 3; c++) {
 		var newCell = newRow.insertCell(c);
 		if (c == 0) {
 			newCell.innerHTML = confNum;
@@ -33,7 +33,14 @@ function addUser() {
 }
 
 function removeUser() {
-	
+	var removeNum = document.getElementById("confNum").value;
+	var table = document.getElementById("queue");
+	for (var i = 1; i < table.rows.length; i++){
+		var current = table.rows[i].cells[0].innerHTML;
+		if (removeNum === current) {
+			table.deleteRow(i);
+		}
+	}
 }
 
 function removeFront() {
